@@ -1,11 +1,14 @@
 import React from 'react';
 import '@/shared/styles/index.scss';
+import {Header} from "@/widgets/Header";
+import {AppRouter} from "@/app/router/ui/AppRouter";
 
 const App = () => {
     return (
-       <>
-         <h1 className={'app'}>Test Test Test</h1>
-       </>
+       <div className='wide-container'>
+         <Header />
+         <AppRouter/>
+       </div>
     );
 };
 
