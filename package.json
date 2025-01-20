@@ -7,8 +7,7 @@
     "start": "webpack serve --env port=3000 mode=development",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
-    "build:desktop": "webpack --env mode=development --env platform=desktop",
-    "build:mobile": "webpack --env mode=development --env platform=mobile"
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +21,7 @@
     "@types/webpack": "^5.28.5",
     "css-loader": "^7.1.2",
     "fork-ts-checker-webpack-plugin": "^9.0.2",
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.6.3",
     "mini-css-extract-plugin": "^2.9.2",
     "react-refresh": "^0.16.0",
