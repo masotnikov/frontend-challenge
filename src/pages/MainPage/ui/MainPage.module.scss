@@ -1,3 +1,20 @@
 .MainPage {
+  display: flex;
+  flex-direction: column;
 
+  .catsList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 48px;
+    row-gap: 46px;
+    width: 100%;
+    padding-top: 48px;
+  }
+
+  .loading,
+  .error {
+    font-size: 18px;
+    color: #888;
+    margin-top: 20px;
+  }
 }

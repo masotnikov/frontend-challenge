@@ -1,3 +1,19 @@
 .FavoritesPage {
+  padding: 20px;
 
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .catsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  p {
+    font-size: 18px;
+    color: #555;
+  }
 }
