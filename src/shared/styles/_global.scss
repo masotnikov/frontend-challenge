@@ -10,6 +10,11 @@ body {
   margin-inline: auto;
 }
 
+.container-header {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  padding-inline: var(--container-padding-x);
+}
+
 .wide-container {
   max-width: var(--wide-container-width);
   margin-inline: auto;

@@ -14,7 +14,7 @@ export const AppRouter: FC<AppRouterProps> = (props) => {
       <Routes>
         {routeConfig.map(({path, element}) => (
           <Route
-            key={path}
+            key={path || 'not found'}
             path={path}
             element={(
               <div className="container">

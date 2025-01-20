@@ -1,16 +1,22 @@
-import {RouteProps} from "react-router-dom";
-import {MainPage} from "@/pages/MainPage";
+import {Navigate, RouteProps} from "react-router-dom";
 import {FavoritesPage} from "@/pages/FavoritesPage";
 import {NotFoundPage} from "@/pages/NotFoundPage";
+import {getRouteAllCats, getRouteFavorites} from "@/shared/const/router";
+import {MainPage} from "@/pages/MainPage";
 
 
 export const routeConfig: RouteProps[] = [
   {
-    path: '/all-cats',
-    element: <MainPage/>
+    path: '/',
+    element: <Navigate to={getRouteAllCats()} replace />
   },
   {
-    path: '/favorites',
+    path: getRouteAllCats(),
+    element: <MainPage />,
+
+  },
+  {
+    path: getRouteFavorites(),
     element: <FavoritesPage/>
   },
   {
