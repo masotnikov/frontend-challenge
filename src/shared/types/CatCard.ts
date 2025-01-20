@@ -3,4 +3,5 @@ export interface CatCard {
   url: string;
   width: number;
   height: number;
+  isFavorite: boolean;
 }

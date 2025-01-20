@@ -1,8 +1,9 @@
-import React, { FC } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import { useGetCatsQuery } from '@/shared/api/baseApi';
+import React, {FC} from 'react';
+import {classNames} from '@/shared/lib/classNames/classNames';
+import {useGetCatsQuery} from '@/shared/api/baseApi';
 import cls from './MainPage.module.scss';
-import {CatItem} from "@/entities/cat";
+import CatItem from "@/entities/cat/ui/CatItem";
+
 
 interface MainPageProps {
   className?: string;
@@ -17,9 +18,9 @@ const MainPage: FC<MainPageProps> = ({ className }) => {
   return (
     <div className={classNames(cls.MainPage, {}, [className])}>
       <div className={cls.catsList}>
-        {cats?.map((cat) => (
-          <CatItem key={cat.id} cat={cat} />
-        ))}
+          {cats?.map((cat) => (
+            <CatItem key={cat.id} cat={cat} />
+          ))}
       </div>
     </div>
   );
