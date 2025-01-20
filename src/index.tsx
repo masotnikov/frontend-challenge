@@ -13,7 +13,7 @@ const root = createRoot(rootElement);
 
 root.render(
   <StoreProvider>
-    <BrowserRouter>
+    <BrowserRouter basename="/frontend-challenge">
       <App/>
     </BrowserRouter>
   </StoreProvider>
