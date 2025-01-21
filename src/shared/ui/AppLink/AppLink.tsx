@@ -13,16 +13,14 @@ export const AppLink: FC<AppLinkProps> = (props) => {
 
     return (
       <nav className={classNames(cls.AppLink, {}, [className])}>
-        <li>
-          <NavLink
-            to={getRouteAllCats()}
-            className={({isActive}) =>
-              classNames(cls.link, {[cls.active]: isActive})
-            }
-          >
-            Все котики
-          </NavLink>
-        </li>
+        <NavLink
+          to={getRouteAllCats()}
+          className={({isActive}) =>
+            classNames(cls.link, {[cls.active]: isActive})
+          }
+        >
+          Все котики
+        </NavLink>
         <NavLink
           to={getRouteFavorites()}
           className={({isActive}) =>
