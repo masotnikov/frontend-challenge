@@ -17,9 +17,9 @@ export const AppRouter: FC<AppRouterProps> = (props) => {
             key={path || 'not found'}
             path={path}
             element={(
-              <div className="container">
+              <main className="container">
                 {element}
-              </div>
+              </main>
             )}
           >
           </Route>

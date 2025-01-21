@@ -1,7 +1,7 @@
-import { FC } from "react";
-import { classNames } from "@/shared/lib/classNames/classNames";
-import { CatItem } from "@/entities/cat";
-import { useFavorites } from "@/features/favorites/hooks/useFavorites";
+import {FC} from "react";
+import {classNames} from "@/shared/lib/classNames/classNames";
+import {CatItem} from "@/entities/cat";
+import {useFavorites} from "@/features/favorites/hooks/useFavorites";
 import cls from "./FavoritesPage.module.scss";
 
 interface FavoritesPageProps {
@@ -9,8 +9,8 @@ interface FavoritesPageProps {
 }
 
 const FavoritesPage: FC<FavoritesPageProps> = (props) => {
-  const { className } = props;
-  const { favoriteCats } = useFavorites(); // Получаем избранных котиков
+  const {className} = props;
+  const {favoriteCats} = useFavorites(); // Получаем избранных котиков
 
   if (favoriteCats.length === 0) {
     return (
@@ -22,11 +22,13 @@ const FavoritesPage: FC<FavoritesPageProps> = (props) => {
 
   return (
     <div className={classNames(cls.FavoritesPage, {}, [className])}>
-      <div className={cls.catsList}>
+      <ul className={cls.catsList}>
         {favoriteCats.map((cat) => (
-          <CatItem key={cat.id} cat={cat} />
+          <li key={cat.id}>
+            <CatItem cat={cat}/>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

@@ -17,11 +17,13 @@ const MainPage: FC<MainPageProps> = ({ className }) => {
 
   return (
     <div className={classNames(cls.MainPage, {}, [className])}>
-      <div className={cls.catsList}>
+      <ul className={cls.catsList}>
           {cats?.map((cat) => (
-            <CatItem key={cat.id} cat={cat} />
+            <li key={cat.id}>
+              <CatItem cat={cat} />
+            </li>
           ))}
-      </div>
+      </ul>
     </div>
   );
 };
